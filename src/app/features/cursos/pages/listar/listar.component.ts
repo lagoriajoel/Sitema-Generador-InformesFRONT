@@ -117,8 +117,8 @@ export class ListarComponent implements OnInit {
   }
 
   informes(idCurso: number){
-   
-    this.router.navigate(["/materias", this.idCurso]);
+    this.idCurso=idCurso;
+    this.router.navigate(["/materias/listar/", this.idCurso]);
   }
 
 }

@@ -14,6 +14,11 @@ const appRoutes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'informes',
+    loadChildren: () => import('./features/informes/informes.module').then(m => m.InformesModule),
+    canActivate: [AuthGuard]
+  },
+  {
     path: 'customers',
     loadChildren: () => import('./features/customers/customers.module').then(m => m.CustomersModule),
     canActivate: [AuthGuard]
@@ -38,7 +43,14 @@ const appRoutes: Routes = [
     path: 'cursos',
     loadChildren: () => import('./features/cursos/cursos.module').then(m => m.CursosModule),
     canActivate: [AuthGuard]
-  },
+  }
+  ,
+  {
+    path: 'contenidos',
+    loadChildren: () => import('./features/contenidos/contenidos.module').then(m => m.ContenidosModule),
+    canActivate: [AuthGuard]
+  }
+  ,
   
   {
     path: 'alumnos',

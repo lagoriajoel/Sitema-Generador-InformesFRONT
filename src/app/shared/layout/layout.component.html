@@ -67,6 +67,13 @@
           </mat-icon>
           <p mat-line> Dashboard </p>
         </a>
+        <a mat-list-item [routerLink]="['/informes/:id']" routerLinkActive="active">
+          <mat-icon mat-list-icon>
+            dashboard
+          </mat-icon>
+          <p mat-line> Informes Desempeño </p>
+        </a>
+
 
         <a mat-list-item [routerLink]="['/cursos']" routerLinkActive="active">
           <mat-icon mat-list-icon>
@@ -80,11 +87,19 @@
           </mat-icon>
           <p mat-line> Alumnos </p>
         </a>
-        <a mat-list-item [routerLink]="['/materias']" routerLinkActive="active">
+        <a mat-list-item [routerLink]="['/materias/:id']" routerLinkActive="active">
           <mat-icon mat-list-icon>
            assignment
           </mat-icon>
           <p mat-line> Materias </p>
+        </a>
+        <a mat-list-item [routerLink]="['/contenidos/:idCurso']" routerLinkActive="active">
+          <mat-icon mat-list-icon>
+           
+              library_books
+  
+          </mat-icon>
+          <p mat-line> Contenidos </p>
         </a>
 
         <a mat-list-item [routerLink]="['/account/profile']">
